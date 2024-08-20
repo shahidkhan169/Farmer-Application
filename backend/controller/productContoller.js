@@ -1,6 +1,7 @@
 const FarmerProduct = require('../models/FarmerProdModel');
 const FarmerRegistration = require('../models/FarmerRegModel');
 
+
 // Add a product
 module.exports.addProduct = async (req, res) => {
   try {
@@ -97,3 +98,4 @@ module.exports.getAllUniqueTypes = async (req, res) => {
     res.status(500).json({ message: "Failed to retrieve types", error });
   }
 };
+
