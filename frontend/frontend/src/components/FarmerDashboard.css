@@ -1,0 +1,144 @@
+.dashboard-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f5f5f5; /* Light gray background for the whole dashboard */
+    border-radius: 10px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dashboard-container h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 30px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .dashboard-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .dashboard-column {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .dashboard-card {
+    background-color: #ffffff; /* White background for cards */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-header {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #007bff; /* Blue color for card headers */
+    background-color: #e9faff; /* Light blue background for card headers */
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .card-icon {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  .card-content {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .card-footer {
+    text-align: right;
+  }
+  
+  .edit-profile-button,
+  .add-product-button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .edit-profile-button {
+    background-color: #007bff; /* Blue button for editing profile */
+    color: #fff;
+  }
+  
+  .edit-profile-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .add-product-button {
+    background-color: #28a745; /* Green button for adding products */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .add-product-button:hover {
+    background-color: #218838;
+  }
+  
+  .button-icon {
+    font-size: 16px;
+    margin-right: 8px;
+  }
+  
+  .update-info-card.editing-mode {
+    background-color: #e9f5e9; /* Light green background when in editing mode */
+  }
+  
+  .update-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff; /* White background for inputs */
+  }
+  
+  .submit-button {
+    padding: 12px;
+    background-color: #28a745; /* Green color for submit button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #218838;
+  }
+  
