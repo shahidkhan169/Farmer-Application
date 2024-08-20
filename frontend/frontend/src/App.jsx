@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component } from 'react';
 import { useState } from 'react';
 import { BrowserRouter,Route,Routes } from 'react-router-dom';
@@ -19,6 +20,23 @@ function App() {
         </Routes>
       </BrowserRouter>
     </div>
+=======
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './components/HomePage';
+import RegistrationPage from './components/RegistrationPage';
+import FarmerDashboard from './components/FarmerDashboard'; // Import your new dashboard component
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/register/:type" element={<RegistrationPage />} />
+        <Route path="/dashboard" element={<FarmerDashboard />} /> {/* Add the new route */}
+      </Routes>
+    </Router>
+>>>>>>> d643c47c5795aa6bd21affdfbb95d07bc2809840
   );
 }
 
