@@ -1,16 +1,39 @@
-const express=require('express');
-const dotenv=require('dotenv');
+const express = require('express');
+const cors = require('cors');
+const dotenv = require('dotenv');
+const connect_mongodb = require('./config/db');
+const routes = require('./routes/farmer.routes'); 
 
 dotenv.config();
 
-const connect_mongodb = require('./config/database');
+const app = express();
 
-const app = require('./app');
+// Middleware for handling CORS (Cross-Origin Resource Sharing)
+app.use(cors({
+    origin: 'http://localhost:8080',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true,
+})); 
 
-connect_mongodb();
+// Middleware for parsing JSON requests
+app.use(express.json()); 
 
-const PORT = process.env.PORT || 5000;
+// Setup routes
+app.use('/api', routes);
 
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+// Error handling middleware
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Something broke!');
+});
+
+// Connect to MongoDB and start the server
+const PORT = process.env.PORT || 8080;
+
+connect_mongodb().then(() => {
+    app.listen(PORT, () => {
+        console.log(`Server running on port ${PORT}`);
+    });
+}).catch(err => {
+    console.error('Failed to connect to MongoDB', err);
 });
