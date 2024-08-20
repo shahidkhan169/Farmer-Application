@@ -2,7 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const connect_mongodb = require('./config/db');
-const routes = require('./routes/farmer.routes'); 
+const routes = require('./routes/farmer.routes');
+const cus_routes=require('./routes/customer.routes') 
 
 dotenv.config();
 
@@ -19,6 +20,7 @@ app.use(cors({
 app.use(express.json()); 
 
 // Setup routes
+app.use('/api/customer',cus_routes)
 app.use('/api', routes);
 
 // Error handling middleware
