@@ -6,6 +6,7 @@ const farmerproduct=new mongoose.Schema({
     prodname:{type:String,required:true},
     type:{type:String,required:true},
     quantity:{type:String,required:true},
+    type:{type:String,required:true},   
     price:{type:String,required:true},
     cultivatedDate:{type:Date,required:true},
     expiryDate:{type:Date,required:true}
