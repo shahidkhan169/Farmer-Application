@@ -1,10 +1,18 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
 const {
-    createFarmer,
-} = require('../controller/farmerController');
+  createFarmer,
+  signIn,
+  getFarmerByEmail,
+  updateFarmer,
+  deleteFarmer,
+} = require("../controller/farmerController");
 
-router.post('/framer', createFarmer);
+router.post("/create", createFarmer);
+router.post("/signin", signIn);
+router.get("/email", getFarmerByEmail);
+router.put("/update", updateFarmer);
+router.delete("/delete", deleteFarmer);
 
 module.exports = router;
