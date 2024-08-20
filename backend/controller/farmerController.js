@@ -23,7 +23,25 @@ module.exports.createFarmer = async (req, res) => {
     } = req.body;
 
     // Validate required fields
-    if (!name || !dob || !age || !gender || !phoneNumber || !village || !city || !district || !state || !postalcode || !land || !landAcre || !AadharNumber || !email || !password || !confirmPassword || typeof valid === 'undefined') {
+    if (
+      !name ||
+      !dob ||
+      !age ||
+      !gender ||
+      !phoneNumber ||
+      !village ||
+      !city ||
+      !district ||
+      !state ||
+      !postalcode ||
+      !land ||
+      !landAcre ||
+      !AadharNumber ||
+      !email ||
+      !password ||
+      !confirmPassword ||
+      typeof valid === "undefined"
+    ) {
       return res.status(400).json({ message: "All fields are required." });
     }
 
@@ -44,9 +62,11 @@ module.exports.createFarmer = async (req, res) => {
       return res.status(400).json({ message: "Passwords do not match." });
     }
 
-    // Validate age (optional)
+    // Validate age
     if (isNaN(age) || age < 18) {
-      return res.status(400).json({ message: "Invalid age. Age must be a number and at least 18." });
+      return res
+        .status(400)
+        .json({ message: "Invalid age. Age must be a number and at least 18." });
     }
 
     // Validate postal code (6 digits)
@@ -80,8 +100,12 @@ module.exports.createFarmer = async (req, res) => {
     // Save farmer to the database
     await farmer.save();
 
-    res.status(201).json({ message: "Farmer registered successfully.", farmer });
+    res
+      .status(201)
+      .json({ message: "Farmer registered successfully.", farmer });
   } catch (error) {
-    res.status(500).json({ message: "Server error. Please try again later.", error });
+    res
+      .status(500)
+      .json({ message: "Server error. Please try again later.", error });
   }
 };

@@ -17,7 +17,7 @@ const farmerRegSchema = new mongoose.Schema({
   postalcode: { type: String, required: true },
   land: { type: String },
   landAcre: { type: Number, required: true },
-  AadharNumber: { type: Number, required: true },
+  AadharNumber: { type: Number },
   farmerCard: [fileSchema],
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
