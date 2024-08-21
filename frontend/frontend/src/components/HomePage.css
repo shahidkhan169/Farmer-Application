@@ -1,166 +1,186 @@
-.homepage-container {
-  position: relative;
-  padding-bottom: 60px; /* Space for the floating icon */
-  font-family: Arial, sans-serif;
-  background-color: #f0f4f8; /* Light background color */
-}
+  .homepage-container {
+    position: relative;
+    padding-bottom: 60px; /* Space for the floating icon */
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8; /* Light background color */
+  }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  background-color: #343a40; /* Dark background color */
-  color: #fff;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
-}
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #343a40; /* Dark background color */
+    color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  }
 
-.navbar-brand {
-  font-size: 28px;
-  font-weight: bold;
-}
+  .navbar-brand {
+    font-size: 28px;
+    font-weight: bold;
+  }
 
-.navbar-login {
-  display: flex;
-  align-items: center;
-}
+  .navbar-login {
+    display: flex;
+    align-items: center;
+  }
 
-.login-button {
-  margin-right: 15px;
-  padding: 10px 20px;
-  background-color: #007bff; /* Blue background */
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s;
-}
+  .login-button {
+    margin-right: 15px;
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue background */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
 
-.login-button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-}
+  .login-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
 
-.register-dropdown {
-  position: relative;
-}
+  .register-dropdown {
+    position: relative;
+  }
 
-.register-button {
-  padding: 10px 20px;
-  background-color: #28a745; /* Green background */
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s;
-}
+  .register-button {
+    padding: 10px 20px;
+    background-color: #28a745; /* Green background */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
 
-.register-button:hover {
-  background-color: #218838; /* Darker green on hover */
-}
+  .register-button:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
 
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background-color: #fff;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-}
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+  }
 
-.dropdown-item {
-  padding: 10px 20px;
-  border: none;
-  background-color: #fff;
-  color: #333;
-  cursor: pointer;
-  font-size: 16px;
-  text-align: left;
-  transition: background-color 0.3s;
-}
+  .dropdown-item {
+    padding: 10px 20px;
+    border: none;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: left;
+    transition: background-color 0.3s;
+  }
 
-.dropdown-item:hover {
-  background-color: #f8f9fa; /* Light grey on hover */
-}
+  .dropdown-item:hover {
+    background-color: #f8f9fa; /* Light grey on hover */
+  }
 
-.content {
-  text-align: center;
-  padding: 40px 20px;
-  background-color: #ffffff; /* White background for content area */
-  border-radius: 10px;
-  margin: 20px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow for content box */
-}
+  .content {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ffffff; /* White background for content area */
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow for content box */
+  }
 
-.content h1 {
-  font-size: 36px;
-  color: #343a40; /* Dark text color */
-}
+  .content h1 {
+    font-size: 36px;
+    color: #343a40; /* Dark text color */
+  }
 
-.content p {
-  font-size: 18px;
-  color: #6c757d; /* Grey text color */
-}
+  .content p {
+    font-size: 18px;
+    color: #6c757d; /* Grey text color */
+  }
 
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Three columns layout */
-  gap: 15px; /* Reduced gap */
-  padding: 20px;
-}
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns layout */
+    gap: 15px; /* Reduced gap */
+    padding: 20px;
+  }
 
-.feature-item {
-  background: linear-gradient(145deg, #d3cce3, #e9e4f0); /* Light gradient background */
-  color: #333; /* Dark text color */
-  padding: 20px; /* Increased padding */
-  border-radius: 8px; /* Slightly smaller border radius */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Slightly reduced shadow */
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition effects */
-  aspect-ratio: 1; /* Make feature items square */
-}
+  .feature-item {
+    background: linear-gradient(145deg, #d3cce3, #e9e4f0); /* Light gradient background */
+    color: #333; /* Dark text color */
+    padding: 20px; /* Increased padding */
+    border-radius: 8px; /* Slightly smaller border radius */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Slightly reduced shadow */
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition effects */
+    aspect-ratio: 1; /* Make feature items square */
+  }
 
-.feature-icon {
-  font-size: 36px; /* Adjust icon size */
-  margin-bottom: 10px;
-}
+  .feature-icon {
+    font-size: 36px; /* Adjust icon size */
+    margin-bottom: 10px;
+  }
 
-.feature-item h2 {
-  font-size: 20px; /* Slightly larger font size for headings */
-  margin: 10px 0;
-}
+  .feature-item h2 {
+    font-size: 20px; /* Slightly larger font size for headings */
+    margin: 10px 0;
+  }
 
-.feature-item p {
-  font-size: 16px; /* Slightly larger font size for paragraphs */
-}
+  .feature-item p {
+    font-size: 16px; /* Slightly larger font size for paragraphs */
+  }
 
-.feature-item:hover {
-  transform: scale(1.03); /* Slight zoom effect on hover */
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
-}
+  .feature-item:hover {
+    transform: scale(1.03); /* Slight zoom effect on hover */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+  }
 
-.dashboard-icon {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #007bff; /* Blue background */
-  color: #fff;
-  padding: 15px;
-  border-radius: 50%;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  font-size: 24px;
-  transition: background-color 0.3s, transform 0.3s; /* Smooth transition effects */
-}
+  .dashboard-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff; /* Blue background */
+    color: #fff;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 24px;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition effects */
+  }
 
-.dashboard-icon:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-  transform: scale(1.1); /* Slight zoom effect on hover */
-}
+  .dashboard-icon:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.1); /* Slight zoom effect on hover */
+  }
 
-.fas.fa-tachometer-alt {
-  margin: 0;
-}
+  .fas.fa-tachometer-alt {
+    margin: 0;
+  }
+  .navbar-left {
+    position: absolute;
+    left: 30px; /* Adjust as needed */
+    top: 15px;
+  }
+  
+  .new-button {
+    padding: 10px 20px;
+    background-color: #17a2b8; /* Teal background */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .new-button:hover {
+    background-color: #117a8b; /* Darker teal on hover */
+  }

@@ -1,0 +1,80 @@
+/* DashboardPage.css */
+.dashboard-container {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for the dashboard */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+  }
+  
+  .dashboard-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px; /* Space between the title and the grid */
+    color: #343a40; /* Dark color for the title */
+  }
+  
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four equal columns in one row */
+    gap: 15px;
+    max-width: 1200px; /* Set a maximum width for the grid */
+    width: 100%; /* Full width of the container */
+    justify-items: center; /* Center items horizontally in each grid cell */
+    align-items: center; /* Center items vertically in each grid cell */
+  }
+  
+  .info-item {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content within the info-item */
+    width: 100%; /* Ensure the item takes full width of its column */
+    max-width: 200px; /* Optional: Limit the max-width of each info-item */
+  }
+  
+  .info-icon {
+    margin-right: 8px;
+  }
+  
+  .options-container {
+    width: 100%; /* Same width as the grid */
+    max-width: 1200px; /* Align with the grid's max-width */
+    margin-top: 20px; /* Space between the grid and the options list */
+  }
+  
+  .options-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 15px; /* Space between the items */
+    width: 100%; /* Full width of the container */
+  }
+  
+  .option-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content within the option-item */
+    text-align: center; /* Center text */
+  }
+  
+  .option-icon {
+    margin-right: 10px;
+    font-size: 24px; /* Adjust icon size */
+  }
+  
+  .option-text {
+    display: flex;
+    flex-direction: column;
+  }
+  

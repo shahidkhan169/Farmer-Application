@@ -21,9 +21,18 @@ const HomePage = () => {
     navigate('/dashboard');
   };
 
+  const handleNewButtonClick = () => {
+    navigate('/dashboardPage'); // Update to the new path for DashboardPage
+  };
+
   return (
     <div className="homepage-container">
       <nav className="navbar">
+        <div className="navbar-left">
+          <button className="new-button" onClick={handleNewButtonClick}>
+            Dashboard Page
+          </button>
+        </div>
         <div className="navbar-brand">MyWebsite</div>
         <div className="navbar-login">
           <button className="login-button">Login</button>
