@@ -1,4 +1,6 @@
 const customerReg= require('../models/CustomerRegModel');
+const FarmerProduct = require('../models/FarmerProdModel');
+const FarmerRegistration = require('../models/FarmerRegModel');
 const dotenv = require('dotenv');
 dotenv.config();
 const nameRegex = /^[A-Za-z\s]+$/;
@@ -182,6 +184,75 @@ module.exports.getDetails = async (req, res) => {
                 postalcode: customer.postalcode,
                 email: customer.email
             }
+        });
+    } catch (err) {
+        res.status(500).json({ message: 'Server error', error: err.message });
+    }
+};
+
+
+module.exports.custview = async (req, res) => {
+    try {
+        const { postalcode } = req.query; // Expect postalcode as a query parameter
+
+        if (!postalcode) {
+            return res.status(400).json({ message: 'Postalcode is required' });
+        }
+
+        // Convert postalcode to a number for range calculation
+        const postalCodeNumber = parseInt(postalcode);
+
+        // Fetch farmers whose postal codes are the same, one before, or one after the given postal code
+        const farmers = await FarmerRegistration.find({
+            postalcode: {
+                $in: [
+                    (postalCodeNumber - 1).toString(),
+                    postalCodeNumber.toString(),
+                    (postalCodeNumber + 1).toString()
+                ]
+            }
+        });
+
+        if (!farmers.length) {
+            return res.status(404).json({ message: 'No farmers found within the specified range' });
+        }
+
+        // Fetch products from the found farmers
+        const products = await FarmerProduct.find({
+            userId: { $in: farmers.map(farmer => farmer._id) }
+        });
+
+        if (!products.length) {
+            return res.status(404).json({ message: 'No products found for farmers in the specified range' });
+        }
+
+        res.status(200).json({
+            success: true,
+            products
+        });
+    } catch (err) {
+        res.status(500).json({ message: 'Server error', error: err.message });
+    }
+};
+
+module.exports.getProductsByType = async (req, res) => {
+    try {
+        const { type } = req.query; // Expecting 'type' as a query parameter
+
+        if (!type) {
+            return res.status(400).json({ message: 'Product type is required' });
+        }
+
+        // Fetch products by type
+        const products = await FarmerProduct.find({ type });
+
+        if (!products.length) {
+            return res.status(404).json({ message: 'No products found for the specified type' });
+        }
+
+        res.status(200).json({
+            success: true,
+            products
         });
     } catch (err) {
         res.status(500).json({ message: 'Server error', error: err.message });
