@@ -7,7 +7,7 @@ import Product from './components/Product';
 import HomePage from './components/HomePage';
 import RegistrationPage from './components/RegistrationPage';
 import FarmerDashboard from './components/FarmerDashboard'; // Import your new dashboard component
- // Import the new DashboardPage component
+
 
 function App() {
 
