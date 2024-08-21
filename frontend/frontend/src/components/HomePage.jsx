@@ -30,9 +30,7 @@ const HomePage = () => {
     <div className="homepage-container">
       <nav className="navbar">
         <div className="navbar-left">
-          <button className="new-button" onClick={handleNewButtonClick}>
-            Dashboard Page
-          </button>
+          
         </div>
         <div className="navbar-brand">MyWebsite</div>
         <div className="navbar-login">
